@@ -3,7 +3,7 @@ require_once 'vendor/autoload.php';
 
 // Connexion à la base de données MySQL
 $host = 'localhost:3307';
-$dbname = 'dailytrip';
+$dbname = 'dailytrip_0';
 $username = 'root';  // Remplacez par votre nom d'utilisateur
 $password = '';      // Remplacez par votre mot de passe
 $dsn = "mysql:host=$host;dbname=$dbname;charset=utf8mb4";
@@ -86,16 +86,20 @@ function insertReview($pdo, $faker) {
 insertCategory($pdo, $faker, $categories);
 
 // Insérer des trips, reviews et ratings
-for ($i = 0; $i < 100; $i++) {
+for ($i = 0; $i < 50; $i++) {
     insertTrip($pdo, $faker, $categories);
 }
 
-for ($i = 0; $i < 300; $i++) {
+for ($i = 0; $i < 150; $i++) {
     insertReview($pdo, $faker);
 }
 
-for ($i = 0; $i < 500; $i++) {
+for ($i = 0; $i < 250; $i++) {
     insertRating($pdo, $faker);
 }
+
+// for ($i = 0; $i < 250; $i++) {
+//     insertPoi($pdo, $faker);
+// }
 
 echo "Base de données remplie avec succès avec 100 trips, 300 reviews et 500 ratings! Bien joué!";
