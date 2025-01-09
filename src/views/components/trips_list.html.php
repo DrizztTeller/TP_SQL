@@ -67,7 +67,7 @@ $trips = getTrips($pdo);
       <div class="absolute text-white z-1 bottom-0 p-3 bg-gradient-to-b from-black to-black w-full h-[100px] rounded-b-lg flex flex-col justify-between ">
         <h1 class=" font-bold text-white truncate overflow-hidden"><?= $trip['title'] ?></h1>
         <h4 class="italic text-white"><?= $trip['duration'] ?></h4>
-        <p class="italic text-[14px]"><?= $trip['distance'] ?> dm</p>
+        <p class="italic text-[14px]"><?= $trip['distance'] ?> dam</p>
       </div>
     </div>
   <?php endforeach; ?>
