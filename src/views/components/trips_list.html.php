@@ -14,22 +14,6 @@ try {
   exit;
 }
 
-
-function getItems(PDO $pdo, string $table)
-{
-  // on écrit la requête SQL
-  $query = "SELECT * FROM $table";
-
-  // on réalise une préparation de la requête (statement)
-  $stmt = $pdo->prepare($query);
-
-  // on exécute la requête
-  $stmt->execute();
-
-  // on  retourne les données sous forme d'un tableau associatif
-  return $stmt->fetchAll(PDO::FETCH_ASSOC);
-};
-
 function getTrips(PDO $pdo)
 {
   // on écrit la requête SQL
@@ -50,13 +34,9 @@ function getTrips(PDO $pdo)
 
 
 $trips = getTrips($pdo);
-// $reviews = getItems($pdo, "review");
-// $ratings = getItems($pdo, "rating");
 // var_dump($trips);
 // die();
 // var_dump(count($trips));
-// var_dump(count($reviews));
-// var_dump(count($ratings));
 ?>
 
 <article class="article-list-trips grid grid-cols-6 gap-6 mx-10">
