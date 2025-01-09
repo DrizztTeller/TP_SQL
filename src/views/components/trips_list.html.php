@@ -51,5 +51,4 @@ $trips = getTrips($pdo);
       </div>
     </div>
   <?php endforeach; ?>
-
 </article>
